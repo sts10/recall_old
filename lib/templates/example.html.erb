@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= example.query %></title>
   </head>
   <body>
-    <h1><%= example.query %></h1>
-    <h3>Release Date: <%= movie.release_date %></h3>
-    <h4><em>Director: <%= movie.director %></em></h4>
-    <p><%= movie.summary %></p>
-    <br />
-    <h2>Other Movies</h2>
-    <ul>
+    <p>HELLO!</p>
+   <!--  <ul>
       <% Example.all.each do |example| %>
-        <li><a href="<%= movie.url %>"><%= movie.title %></a></li>
+        <li><%= example.results_string %></li>
       <% end %>
-    </ul>
+    </ul> -->
+    <p><%= example.results_string %></p>
+
   </body>
 </html>

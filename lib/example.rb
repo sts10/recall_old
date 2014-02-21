@@ -10,38 +10,40 @@ require 'pry'
 
 # how to do this in ruby 
 class Example  
-  attr_accessor :query, :url 
+  attr_accessor :results_string
 
   ALL = []
 
   def url 
-    "#{query.downcase.gsub(" ", "_")}.html"
+    "#{@query.downcase.gsub(" ", "_")}.html"
   end 
 
   def self.all 
     ALL 
   end 
 
-
-  def run_grep
+  def get_query
     puts "what would you like to search for?"
-    query = gets.chomp
-    # results = shell %Q[grep -r -n --include=*.rb '.to_s' /Users/samschlinkert/Documents/code/flatiron]
+    @query = gets.chomp
+  end
 
-    results = `grep -r -n --include=*.rb '#{query}' /Users/samschlinkert/Documents/code/flatiron`
-    # file_path, line_num, code = results.split(":")
-    # puts results2.class
-    # puts results2
-    all_results = results.split("\n")
+  def parse_query
+    return `grep -r -n --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron`
+    # results = `grep -r -n --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron`
+    # results_string = results.dup
+
+    # all_results = results.split("\n")
     
-    all_results.each do |result|
-      line_array = []
-      line_array = result.split(":")
-      puts "In file: #{line_array[0]}"
-      puts "#{line_array[1]} :  #{line_array[2]}"
+    
+    # all_results.each do |result|
+    #   line_array = []
+    #   line_array = result.split(":")
+    #   puts "In file: #{line_array[0]}"
+    #   puts "#{line_array[1]} :  #{line_array[2]}"
       
-      puts ""
+    #   puts ""
     end
+
 
   end
 

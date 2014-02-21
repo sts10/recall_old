@@ -2,8 +2,10 @@
 require_relative '../config/environment'
  
 
+my_example = Example.new 
 
-Example.run_grep
+my_example.get_query
+results = my_example.parse_query
 
 site_generator = SiteGenerator.new
-site_generator.make_page!
+site_generator.make_page!(results)
