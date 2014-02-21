@@ -27,7 +27,7 @@ class Example
     @query = gets.chomp
   end
 
-  def parse_query
+  def return_grep
     return `grep -r -n --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron`
     # results = `grep -r -n --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron`
     # results_string = results.dup

@@ -1,6 +1,19 @@
 
 class SiteGenerator 
 
+  def parse_results(results_string)
+    results = results.split("\n")
+    
+    
+    array_of_arrays = all_results.map do |result|
+      line_array = []
+      line_array = result.split(":")
+      # puts "In file: #{line_array[0]}"
+      # puts "#{line_array[1]} :  #{line_array[2]}"
+      
+      # puts ""
+    end 
+  end
 
   def make_page!(results) 
     template_doc= File.open("lib/templates/example.html.erb", "r")
