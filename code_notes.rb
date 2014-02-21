@@ -9,7 +9,20 @@ require 'pry'
 
 
 # how to do this in ruby 
-  
+class Example  
+  attr_accessor :query, :url 
+
+  ALL = []
+
+  def url 
+    "#{query.downcase.gsub(" ", "_")}.html"
+  end 
+
+  def self.all 
+    ALL 
+  end 
+
+
   def run_grep
     puts "what would you like to search for?"
     query = gets.chomp
@@ -32,8 +45,22 @@ require 'pry'
 
   end
 
-  def shell (command)
-    puts `#{command}`
+ 
+end
+
+  def make_page
+    template_doc= File.open("lib/templates/example.html.erb", "r")
+
+    template = ERB.new(template_doc.read)
+    
+    File.open("_site/movies/#{Example.url}", "w") do |f|
+      Example.all.each do |example|      
+        f.write(
+          template.result(binding)
+        )
+      end
+      f.close
+    end
   end
 
 
