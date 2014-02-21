@@ -24,9 +24,9 @@ require 'pry'
     all_results.each do |result|
       line_array = []
       line_array = result.split(":")
-      puts "Code snippet: " 
+      puts "In file: #{line_array[0]}"
       puts "#{line_array[1]} :  #{line_array[2]}"
-      puts "in file: #{line_array[0]}"
+      
       puts ""
     end
 
