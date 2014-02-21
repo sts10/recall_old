@@ -53,7 +53,7 @@ end
 
     template = ERB.new(template_doc.read)
     
-    File.open("_site/movies/#{Example.url}", "w") do |f|
+    File.open("_site/#{Example.url}", "w") do |f|
       Example.all.each do |example|      
         f.write(
           template.result(binding)
@@ -65,6 +65,7 @@ end
 
 
 run_grep
+make_page
 # So our “consult” gem would do the following: 
 
 # $ consult “to_s” [ruby]
