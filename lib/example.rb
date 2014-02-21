@@ -47,29 +47,3 @@ class Example
 
  
 end
-
-  def make_page
-    template_doc= File.open("lib/templates/example.html.erb", "r")
-
-    template = ERB.new(template_doc.read)
-    
-    File.open("_site/#{Example.url}", "w") do |f|
-      Example.all.each do |example|      
-        f.write(
-          template.result(binding)
-        )
-      end
-      f.close
-    end
-  end
-
-
-run_grep
-make_page
-# So our “consult” gem would do the following: 
-
-# $ consult “to_s” [ruby]
-
-# —> grep -r -n —include=*.rb ‘.to_s CODEDIRECTORY 
-
-# Try to pipe this result into that select menu. 
