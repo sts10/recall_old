@@ -2,12 +2,14 @@
 require_relative '../config/environment'
  
 
-my_example = Example.new 
 
-my_example.get_query
-results = my_example.return_grep
 
-site_generator = SiteGenerator.new
+puts "what would you like to search for?"
+query = gets.chomp
+  
 
-site_generator.parse_results(results)
+my_results = Results.new(query)
+
+site_generator = SiteGenerator.new(my_results.parse_results)
+
 site_generator.make_page!

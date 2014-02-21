@@ -4,11 +4,15 @@
   </head>
   <body>
     <p>HELLO!</p>
-   <!--  <ul>
-      <% Example.all.each do |example| %>
-        <li><%= example.results_string %></li>
+    <ul>
+      <% @results.each do |line_array| %>
+        <li>   
+          <p>In file: <%= line_array[0] =></p>
+          <p><%= line_array[1] => : <%= line_array[2] =></p>
+          
+        </li>
       <% end %>
-    </ul> -->
+    </ul> 
     <p><%= example.results_string %></p>
 
   </body>
