@@ -23,15 +23,14 @@ class Results
     results = get_grep_results.split("\n")
     
     
-    array_of_arrays = all_results.map do |result|
+    array_of_arrays = results.map do |result|
       line_array = []
       line_array = result.split(":")
  
     end 
   end
 
-
-  end
+ 
 
  
 end
