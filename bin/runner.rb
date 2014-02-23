@@ -2,9 +2,7 @@
 require_relative '../config/environment'
  
 
-
-
-puts "what would you like to search for?"
+puts "What would you like to search for?"
 query = gets.chomp
   
 
