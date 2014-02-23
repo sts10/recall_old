@@ -24,19 +24,11 @@ class Results
   def parse_results
     results = get_grep_results.split("\n")
   
-    # array_of_result_structs = []
-  
-    # array_of_result_structs = results.map do |result|
     results.map do |result|
       line_array = []
       line_array = result.split(":")
-      # this_result = Result.new(line_array[0], line_array[1], line_array[2])
       Result.new(line_array[0], line_array[1], line_array[2])
-      
-      # array_of_result_structs << this_result
     end 
-
-    # return array_of_result_structs
 
   end
 
