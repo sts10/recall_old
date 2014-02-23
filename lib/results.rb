@@ -16,7 +16,7 @@ class Results
 
 
   def get_grep_results
-    return `grep -r -n --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron`
+    return `grep -r -n -i --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron`
   end
 
   Result = Struct.new(:file_path, :line_number, :code_snippet) 
@@ -31,8 +31,6 @@ class Results
     end 
 
   end
-
-  
 
  
 end
