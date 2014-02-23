@@ -5,10 +5,10 @@
   <body>
     <p>HELLO!</p>
     <ul>
-      <% @results.each do |line_array| %>
+      <% @results.each do |result| %>
         <li>   
-          <p>In file: <a href="file://<%= line_array[0] %>"><%= line_array[0] %></a></p>
-          <p><code><%= line_array[1] %> : <%= line_array[2] %></code></p>
+          <p>In file: <a href="file://<%= result.file_path %>"><%= result.file_path %></a></p>
+          <p><code><%= result.line_number %> : <%= result.code_snippet %></code></p>
           
         </li>
       <% end %>
