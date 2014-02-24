@@ -32,5 +32,20 @@ class Results
 
   end
 
+  def get_full_snippet 
+    @results.each do |result|
+      
+      File.open("#{result.file_path}", "r") do |f|
+        f.each_line do |line|
+          if line < (result.line_number - 5) || line > (result.line_number + 15)
+            next
+          else 
+
+          end
+        end
+      end
+
+    end
+  end 
  
 end
