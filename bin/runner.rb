@@ -8,6 +8,6 @@ query = gets.chomp
 
 my_results = Results.new(query)
 
-site_generator = SiteGenerator.new(my_results.parse_results)
+site_generator = SiteGenerator.new(my_results.get_full_snippet)
 
 site_generator.make_page!

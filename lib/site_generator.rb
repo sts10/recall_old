@@ -17,6 +17,8 @@ class SiteGenerator
       
       f.close
     end
+
+    `open _site/page.html`
   end
 
 end

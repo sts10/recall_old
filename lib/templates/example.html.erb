@@ -8,7 +8,16 @@
       <% @results.each do |result| %>
         <li>   
           <p>In file: <a href="file://<%= result.file_path %>"><%= result.file_path %></a></p>
-          <p><code><%= result.line_number %> : <%= result.code_snippet %></code></p>
+          <p>Starting at line number <code><%= result.line_number %>... 
+
+            <% result.full_code.each do |line| %>
+             
+                <pre><%= line %></pre>
+            
+            <% end %>
+
+
+          </code></p>
           
         </li>
       <% end %>
