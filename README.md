@@ -1,5 +1,5 @@
-# Recall 
-### A command line interface that searches for previous examples of Ruby code based on user's query and present results in default Ruby editor.
+# Recall v. 0.1.0
+#### A command line interface that searches for previous examples of Ruby code based on user's query and present results in default Ruby editor.
 
 
 ## Installation 
