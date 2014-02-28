@@ -7,11 +7,13 @@
 
 
 ## Installation 
-Edit the hard-coded directory in ```lib/results``` to the directory that holds most of your Ruby code.
+1. Clone down the repo.
 
-## Usesubl README
+2. Change the hard-coded directory in ```lib/results``` to the directory that holds most of your Ruby code.
 
-1. Run:
+## Use
+
+1. From your command line run:
 ```ruby bin/runner.rb```
 2. Enter the Ruby method you’re searching for. 
 3. Your default Ruby editor will open with all 20-line snippets for each time you’ve used that method. 
