@@ -7,10 +7,12 @@
 
 ## About 
 
-Recall is a simple Ruby app, run via the command line, to search your code folder. It's a little janky at this point-- use at your own risk. 
+Ever want to find a piece of code you've written but aren't sure which project or file you wrote it in? 
+
+Recall is a simple Ruby app, run via the command line, to recursively search your the Ruby files in your code folder. It's a little janky at this point-- use at your own risk. 
 
 ## Installation 
-1. Clone down the repo.
+1. Clone down this repo.
 
 2. Change the hard-coded directory in ```lib/results``` to the directory that holds most of your Ruby code.
 
