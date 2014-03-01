@@ -5,11 +5,25 @@
 
 > And suddenly the memory returns. The taste was that of the little crumb of madeleine... 
 
+## About 
+
+Recall is a simple Ruby app, run via the command line, to search your code folder. It's a little janky at this point-- use at your own risk. 
 
 ## Installation 
 1. Clone down the repo.
 
 2. Change the hard-coded directory in ```lib/results``` to the directory that holds most of your Ruby code.
+
+#### To Access via Command Line From Any Directory
+Add this to your bash_profile:
+```
+function recall {
+  cwd=$(pwd) #save pwd as cwd
+  cd /Users/samschlinkert/Documents/code/recall
+  ruby bin/runner.rb
+  cd $cwd 
+}
+```
 
 ## Use
 
