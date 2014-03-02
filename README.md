@@ -17,7 +17,7 @@ Recall is a simple Ruby app, run via the command line, to recursively search you
 2. Change the hard-coded directory in ```lib/results``` to the directory that holds most of your Ruby code.
 
 #### To Access via Command Line From Any Directory
-Add this to your bash_profile:
+Add this to your bash_profile (filling in the absolute path to wherever you cloned this repo):
 ```
 function recall {
   cwd=$(pwd) #save pwd as cwd
@@ -31,5 +31,5 @@ function recall {
 
 1. From your command line run:
 ```ruby bin/runner.rb```
-2. Enter the Ruby method you’re searching for. 
-3. Your default Ruby editor will open with all 20-line snippets for each time you’ve used that method. 
+2. Enter the Ruby method (or any phrase used in a Ruby file) you’re searching for. 
+3. Your default Ruby editor will open with a 20-line code snippet for each time you’ve used your query. 
