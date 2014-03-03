@@ -14,8 +14,17 @@ class Results
     "#{@query.downcase.gsub(" ", "_")}.html"
   end 
 
+  def method?
+    @query[0] == '.'
+  end
 
   def get_grep_results
+    if method? 
+      a = @query.split('')
+      a[0] = '\.'
+      @query = a.join('')
+    end
+  
     return `grep -r -n -i --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron | sort -r`
   end
 
