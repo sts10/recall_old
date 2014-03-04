@@ -13,7 +13,7 @@ Recall is a simple Ruby app, run via the command line, to recursively search you
 
 ## Version 0.1.1 
 
-Modifies grep search to only match methods if the user begins his or her query with a period. Also, only matches whole words or methods (so a search for '.to_s' no longer returns uses of '.to_sym', for example). 
+Modifies grep search to match only methods if the user begins his or her query with a period. Also, only matches whole words or whole methods (so a search for '.to_s' no longer returns uses of '.to_sym', for example). 
 
 ## Installation 
 1. Clone down this repo.
