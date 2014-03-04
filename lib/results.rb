@@ -24,7 +24,13 @@ class Results
       a[0] = '\.'
       @query = a.join('')
     end
+
+    b = @query.split('')
+    b.unshift('\b')
+    b.push('\b')
+    @query = b.join('')
   
+
     return `grep -r -n -i --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron | sort -r`
   end
 
