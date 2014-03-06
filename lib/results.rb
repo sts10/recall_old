@@ -18,6 +18,10 @@ class Results
     @query[0] == '.'
   end
 
+  def symbol?
+    @query[0] == ':'
+  end
+
   def get_grep_results
     if method? 
       a = @query.split('')
@@ -25,11 +29,18 @@ class Results
       @query = a.join('')
     end
 
-    b = @query.split('')
-    b.unshift('\b')
-    b.push('\b')
-    @query = b.join('')
-  
+    if symbol?
+      puts "it's a symbol"
+      b = @query.split('')
+      b[0] = ':'
+      @query = b.join('')
+    
+    else
+      c = @query.split('')
+      c.unshift('\b')
+      c.push('\b')
+      @query = c.join('')
+    end
 
     return `grep -r -n -i --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron | sort -r`
   end
