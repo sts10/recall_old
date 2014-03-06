@@ -22,27 +22,24 @@ class Results
     @query[0] == ':'
   end
 
-  def get_grep_results
+  def format_query
     if method? 
       a = @query.split('')
       a[0] = '\.'
       @query = a.join('')
     end
 
-    if symbol?
-      puts "it's a symbol"
-      b = @query.split('')
-      b[0] = ':'
-      @query = b.join('')
-    
-    else
+    if !symbol? 
       c = @query.split('')
       c.unshift('\b')
       c.push('\b')
       @query = c.join('')
     end
+  end
 
-    return `grep -r -n -i --include=*.rb '#{@query}' /Users/samschlinkert/Documents/code/flatiron | sort -r`
+  def get_grep_results
+    format_query # 
+    return `grep -r -n -i --include=*.rb "#{@query}" /Users/samschlinkert/Documents/code/flatiron | sort -r`
   end
 
   Result = Struct.new(:file_path, :line_number, :code_snippet, :full_code) 
