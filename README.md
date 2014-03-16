@@ -24,8 +24,18 @@ Adds better support for searching for symbols (queries that start with colons).
 
 2. Change the hard-coded directory in ```lib/results``` to the directory that holds most of your Ruby code.
 
+3. Add a blank writeable file at ```_site/ruby_file.rb```.
+
+```
+mkdir _site
+touch _site/ruby_file.rb
+chmod a+x _site/ruby_file.rb
+```
+
+
 #### To Access via Command Line From Any Directory
 Add this to your bash_profile (filling in the absolute path to wherever you cloned this repo):
+
 ```
 function recall {
   cwd=$(pwd) #save pwd as cwd
