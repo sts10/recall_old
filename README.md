@@ -40,7 +40,7 @@ Add this to your bash_profile (filling in the absolute path to wherever you clon
 function recall {
   cwd=$(pwd) #save pwd as cwd
   cd /Users/samschlinkert/Documents/code/recall
-  ruby bin/runner.rb
+  ruby bin/runner.rb $1
   cd $cwd 
 }
 ```
