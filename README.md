@@ -1,4 +1,11 @@
-# Recall v. 0.1.2
+# Recall_Old v. 0.1.2
+
+
+## This version is outdated. Recall is now a Ruby gem, and has [a new public repo](https://github.com/sts10/recall). It lets users change the search directory. Please consider using that instead. 
+
+
+
+
 #### A command line interface that searches for previous examples of Ruby code based on user's query and present results in default Ruby editor.
 
 > [E]ach time the natural laziness which deters us from every difficult enterprise, every work of importance, has urged me to leave the thing alone, to drink my tea and to think merely of the worries of today and of my hopes for tomorrow, which let themselves be pondered over without effort or distress of mind. 
