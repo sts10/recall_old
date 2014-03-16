@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 require_relative '../config/environment'
  
-
-puts "What would you like to search for?"
-query = gets.chomp
+if ARGV[0]
+  query = ARGV[0]
+else
+  puts "What would you like to search for?"
+  query = gets.chomp
+end
   
 
 my_results = Results.new(query)
